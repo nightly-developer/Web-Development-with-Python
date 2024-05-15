@@ -1,0 +1,5 @@
+*.md
+logs/
+.git
+.env
+lib/
