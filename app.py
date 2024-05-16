@@ -3,6 +3,7 @@ sys.path.insert(0,'lib')
 
 
 import os
+from Modules.db_connect import *
 from dotenv import load_dotenv
 from flask import Flask, render_template, jsonify
 from pathlib import Path
@@ -22,11 +23,24 @@ data = [{"name": "vaibhav","age": 24, "nationality": "Indian"},{"name": "rishi",
 
 @app.route("/")
 def home():
-  return render_template("Home.html",data=data)
+  return render_template("home.html",data=data)
 
 @app.route("/api/data")
 def json_data():
   return jsonify(data)
+
+@app.route("/api/products")
+def json_product():
+  return jsonify(fetch_all_products())
+
+@app.route("/api/data/<int:id>")
+def get_data():
+  return 0
+
+@app.route("/products")
+def show_product():
+  products = fetch_all_products()
+  return render_template("products.html",proudcts=products)
 
 if __name__ == "__main__":
   app.run(debug=True)

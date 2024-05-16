@@ -3,3 +3,4 @@ logs/
 .git
 .env
 lib/
+__*__.py
