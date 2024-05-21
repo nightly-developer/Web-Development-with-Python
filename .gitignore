@@ -1,6 +1,21 @@
-*.md
-logs/
-.git
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+
+# IDE-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
 .env
-lib/
-__*__.py
+
+# Log files
+*.log
