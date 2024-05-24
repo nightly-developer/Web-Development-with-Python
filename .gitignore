@@ -16,6 +16,6 @@ venv/
 .DS_Store
 Thumbs.db
 .env
-
+node_modules/
 # Log files
 *.log
